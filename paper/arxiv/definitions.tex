@@ -1,0 +1,136 @@
+\section{Definitions and scope}\label{sec:definitions}
+We compare two ways of assigning a number to an infinite noisy system.
+A begun law takes a time limit from prescribed initial data, followed by
+scale limits. An eternal law takes scale limits of stationary ensemble
+statistics. Stationarity supplies no extra time limit. At equal scale
+depth this distinction changes an arithmetic ceiling by one level.
+The comparison concerns expectation functionals and effective consensus
+classes. It makes no assertion that a finite experiment completes a limit.
+
+\subsection{Dynamics and preparations}
+Let $\Sigma$ be a finite labelled alphabet, $N\Subset\Z^D$ a finite
+neighbourhood, and $K(a\mid r)$ a stochastic vector for every
+$r\in\Sigma^N$. The probabilistic cellular automaton (PCA) $P_K$
+updates sites independently conditional on the previous configuration.
+It commutes with translations. Positive rates mean
+\[
+ \kappa(K)=\min_{a,r}K(a\mid r)>0.
+\]
+The finite product of row simplices has its relative topology. Open
+kernel sets below are relatively open in this space. Computability
+means computability of all finitely many entries. The ceiling results
+also apply to kernels with zero entries; the realization and
+fluctuation results explicitly require positive rates.
+
+Write $\M$ for probability measures on $\Sigma^{\Z^D}$ with the weak
+topology and $\M_{\rm TI}$ for the translation-invariant ones. The
+stationary TI class is
+\[
+ \ST(K)=\{\mu\in\M_{\rm TI}:\mu P_K=\mu\}.
+\]
+A phase means an extreme point of this compact convex class. This
+definition does not identify extremality with shift ergodicity.
+An eternal world is a stationary ensemble, with its stationary path
+law when histories are observed. A begun world has law
+$\lambda P_K^t$ at age $t$, where $\lambda$ is a specified computable
+TI measure unless another hypothesis is stated.
+
+For the constructions, coordinates are $(a,b,i)\in\Z^2\times\Z$.
+The noiseless line rule uses an enlarged pre-blocking alphabet $A$.
+Grouping $B$ consecutive cells gives the physical alphabet
+$\Sigma=A^B$, as specified in Section~\ref{sec:renewal}.
+An admissible row law is the blocked image of a full-support,
+one-cell-shift-invariant ergodic law on $A^\Z$. This universality
+class concerns laws before blocking; it does not include arbitrary
+shift-ergodic laws on $\Sigma^\Z$.
+A cloned row has $x(a,b,i)=y(i)$. Its law is TI in all three
+coordinates. Our canonical seed clones a uniform Bernoulli row on
+$\Sigma$; it is the blocked image of the uniform Bernoulli row on
+$A$ and is therefore included. There is no distinguished site or
+finite program in this computable seed. There is a time-zero
+preparation and exact infinite transverse redundancy. This seed is
+not a product measure on $\Z^3$.
+
+\subsection{Readouts and the counting of limits}
+\begin{definition}[Effective finite statistics]\label{def:statistics}
+A scale-depth-$d$ family has indices $\mathbf k\in\N^d$ and
+\[
+ s_{\mathbf k}(\mu)=
+ R_{\mathbf k}\bigl(\mu(F_{\mathbf k,1}),\ldots,
+                         \mu(F_{\mathbf k,j_{\mathbf k}})\bigr).
+\]
+One algorithm, uniformly in every index, returns all finite supports,
+rational cylinder functions $F$, and a real-computable evaluator
+$R$ on an effectively open domain. It computes the value to any
+requested rational accuracy wherever defined. A stationary-history
+statistic may use finitely many space-time cylinders instead.
+The family is bounded linear if $s_{\mathbf k}(\mu)=\mu(F_{\mathbf k})$
+with $|F_{\mathbf k}|\leq1$.
+\end{definition}
+The eternal law and begun law are respectively
+\begin{align}
+ \Phi(\mu)&=\lim_{k_1}\cdots\lim_{k_d}s_{\mathbf k}(\mu),
+       \label{eq:eternal}\\
+ \Phi_{\rm beg}(\lambda,K)&=
+   \lim_{k_1}\cdots\lim_{k_d}\lim_{t\to\infty}
+          s_{\mathbf k,t}(\lambda P_K^t).
+       \label{eq:begun}
+\end{align}
+All limits are finite, and every intermediate limit must exist for
+each fixed tuple of remaining indices. These are partial functionals;
+their admissible indices need not be decidable. At $d=0$, the eternal
+law has no limit, while the begun law still has its time limit.
+Ratios are used only on a positive-denominator domain. A clock-free
+begun family has $s_{\mathbf k,t}=s_{\mathbf k}$: its statistic uses
+scale but not age. A lag in a stationary history is an ordinary index;
+if sent to infinity it counts toward depth.
+
+Consensus on $C\subseteq\ST(K)$ means the entire law is defined
+and has the same value on every member of $C$. Robust begun
+realization means one value for all $K$ in a nonempty open set $U$.
+Robust all-state eternal consensus means one value for every
+stationary state at every $K\in U$. A selected state is not a
+consensus class. All our origin-free statements mean that translating
+the finite reference window changes no ensemble value; they do not
+remove the window's coordinate or block presentation.
+
+\subsection{Arithmetic and effective classes of states}
+Let $0^{(n)}$ denote the $n$th Turing jump, with $0^{(0)}$ computable.
+Put
+\[
+ \D_n=\{x\in\R:x\text{ has a fast Cauchy name computable in }
+                        0^{(n-1)}\},\qquad n\geq1.
+\]
+Thus $\D_1$ is the computable reals and $\D_2$ the limits of
+computable rational sequences. The finite jump hierarchy is strict.
+One existing limit of a uniformly $X$-computable real sequence is
+computable in $X'$.
+
+We fix a compact representation compatible with cylinder Cauchy
+names. For each probability $p$, code
+$2p-1=\sum_{n\geq1}d_n2^{-n}$ with $d_n\in\{-1,0,1\}$,
+and interleave all these signed digits. Three symbols are encoded
+by two bits, excluding the fourth pair by an effective closed
+condition. Decoding is computable and continuous. Conversely,
+given Cauchy data for a residual $y\in[-1,1]$, choose $d=-1,0,1$
+by certifying, respectively, $y<0$, $|y|<1/2$, or $y>0$;
+these overlapping alternatives cover the interval. Replace $y$
+by $2y-d$ and continue. This uniformly computes a code without
+testing equality to a dyadic rational. Normalization and marginal
+consistency impose further effective closed conditions on the
+coordinate arrays. A state is low when it has such a name $X$
+with $X'\equiv_T0'$.
+An effective closed class means a $\Pi^0_1$ class of these valid
+codes; an effective $\Sigma^0_2$ class is a computable union of
+such closed pieces. This is stronger than an arbitrary noneffective
+$F_\sigma$ description. All state-class hypotheses use this fixed
+representation, including validity constraints.
+
+Uniform finite statistics are crucial: a noncomputable site map
+would be advice. Even a computable decoder can carry a target
+program when it varies with the target. The upper bounds quantify
+over all effective readouts. For attainment we instead fix a uniform
+readout schema, independent of the target, parameterized only by
+the finite labelled alphabet, block length and the prescribed depth.
+The target program goes into the finite dynamics. We do not claim
+one literal observation table on one common alphabet for all targets.

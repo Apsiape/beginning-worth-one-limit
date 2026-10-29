@@ -1,0 +1,34 @@
+{
+  "rule30_eps0.02": {
+    "modal_row": "1010101010101010",
+    "modal_share": 0.70989990234375,
+    "modal_fixed": true,
+    "period_and_preperiod": [
+      1,
+      0
+    ],
+    "agreement_d32": 0.95819091796875
+  },
+  "rule30_eps0.01": {
+    "modal_row": "0101010101010101",
+    "modal_share": 0.84735107421875,
+    "modal_fixed": true,
+    "period_and_preperiod": [
+      1,
+      0
+    ],
+    "agreement_d32": 0.9795761108398438
+  },
+  "rule110_eps0.01": {
+    "modal_row": "1101110101011111",
+    "modal_share": 0.002685546875,
+    "modal_fixed": false,
+    "period_and_preperiod": [
+      32,
+      14
+    ],
+    "agreement_d32": 0.7172622680664062
+  },
+  "seconds": 29.89,
+  "peak_working_set_bytes": 40620032
+}

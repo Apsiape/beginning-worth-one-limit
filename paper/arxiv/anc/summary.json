@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "single_threaded": true,
+  "memory_limit_bytes": 900000000,
+  "checks": [
+    {
+      "script": "renewal/check_renewal.py",
+      "status": "PASS",
+      "seconds": 3.656,
+      "sampled_peak_total_rss_bytes": 53755904,
+      "sha256": "9c2ab8d96f45cd802154f30b16afc5a8fdf897dc2cb5cfe17ca43d30b8a9d84d"
+    },
+    {
+      "script": "renewal/check_renewal_independent.py",
+      "status": "PASS",
+      "seconds": 1.145,
+      "sampled_peak_total_rss_bytes": 59236352,
+      "sha256": "e079e2131f3f87e30c0956c0933dda3006ec263d26adf2a10d34f418610d16df"
+    },
+    {
+      "script": "fluctuations/check_fluctuations.py",
+      "status": "PASS",
+      "seconds": 71.765,
+      "sampled_peak_total_rss_bytes": 88977408,
+      "sha256": "5ccd57669cc0220e27a88fec8104ca09669dfd1439717b0aca9416e65e0f174e"
+    },
+    {
+      "script": "fluctuations/check_fluctuations_independent.py",
+      "status": "PASS",
+      "seconds": 1.152,
+      "sampled_peak_total_rss_bytes": 57430016,
+      "sha256": "8250980b771bfc2f5ff52dde2da3cbe5e0169c25e50e957b4b2deda71c6d5f5e"
+    },
+    {
+      "script": "fluctuations/check_modal.py",
+      "status": "PASS",
+      "seconds": 30.301,
+      "sampled_peak_total_rss_bytes": 61362176,
+      "sha256": "de2bb55925bfa7d25f48c65efde686befe82712da150ff6c81482f120d9d1fd8"
+    }
+  ],
+  "memory_method": "sampled child-process-tree plus runner RSS; not an OS historical peak",
+  "scope": "Finite criteria and descriptive simulations are distinguished; no noncomputability certification."
+}

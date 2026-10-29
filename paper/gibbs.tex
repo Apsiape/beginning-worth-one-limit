@@ -1,0 +1,68 @@
+\section{Stationary histories and static Gibbs states}\label{sec:gibbs}
+For a positive-rate kernel, put one translated energy
+\[
+ \varphi_K(x)=-\log K\bigl(x_{0,0}\mid
+                              x|_{N\times\{-1\}}\bigr)
+\]
+at each point of $\Z^D\times\Z$. Each interaction has finite
+range and bounded finite energy at fixed $K$. Row normalizations
+are retained. At computable $K$ the interaction is computable.
+
+Extend a stationary PCA state $\mu$ to its consistent bi-infinite
+path law $\Gamma_\mu$. Changing finitely many space-time spins
+changes exactly the transition factors whose parent-child families
+meet that set. Conditional probability ratios are products of
+these $K$ factors and hence exponentials of the corresponding
+energy differences. This is the finite-range DLR specification.
+Factors centred at future children of resampled spins are included.
+
+The converse for fully space-time TI Gibbs states is the
+PCA/Gibbs correspondence of Goldstein--Kuik--Lebowitz--Maes
+\cite{goldstein}, restated by Taati--Mi\k{e}kisz
+\cite[Theorem~3.2]{miekisztaati}. Such a Gibbs state has the PCA's
+forward transition law and a stationary TI time-zero marginal.
+Full space-time invariance is part of this converse. It is not
+inferred for arbitrary non-TI Gibbs states, and a one-time
+marginal is not itself the four-dimensional Gibbs history.
+
+\begin{proof}[Proof of Corollary~\ref{cor:gibbs}]
+Take a fully TI Gibbs state $\Gamma$ for $\varphi_K$.
+By the correspondence it is a stationary PCA history. The
+two-time probabilities in \eqref{eq:reweight} are static
+cylinders on two slabs separated by $t$ in the fourth direction.
+Equations~\eqref{eq:conditional} and \eqref{eq:transferexact}
+hold. Apply the depth-two transfer of the depth-one realization.
+Every such state has value $\beta$, with slab separation sent
+to infinity as the added limit.
+
+For a computable finite-range finite-alphabet interaction, full
+TI Gibbs classes have effective closed code descriptions:
+impose all local DLR equations against finite exterior cylinder
+tests and all translation equations. Finite conditional weights
+are computable and positive, so failed equations have finite
+precision witnesses. Nonemptiness follows from finite-volume
+Gibbs measures, compactness and translation averaging, as boundary
+fractions vanish on growing boxes. The low-basis and compact-cover
+arguments of Section~\ref{sec:consensus} give the same consensus
+ceilings. A depth-one consensus at computable parameters cannot
+equal a fixed value outside $\D_2$. A computable kernel witness
+transfers the robust ceiling.
+\end{proof}
+
+The map $K\mapsto-\log K$ transports the open kernel region into
+the normalized PCA interaction family, not into an open set of all
+four-dimensional interactions. Uniform-fault weights can instead
+be parameterized by inverse temperature $b$: the total wrong-symbol
+rate is $(q-1)e^{-b}/(1+(q-1)e^{-b})$, for alphabet size $q$.
+A sufficiently large open interval of $b$ stays in the reliable
+region with normalization preserved.
+
+A begun half-space formulation fixes a cloned bottom row, uses
+the causal law above it, and then averages over the prescribed row
+distribution. Interior DLR ratios have the same transition-factor
+calculation, including future children. Its begun statistics are
+those already proved. When full-space time invariance is needed
+in a limiting history, use Ces\`aro time shifts or prove it
+separately. Ordinary accumulation alone does not give invariance.
+The static all-state result uses the correspondence and transfer,
+not an assumption of a unique full-space Gibbs phase.

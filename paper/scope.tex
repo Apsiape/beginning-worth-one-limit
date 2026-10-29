@@ -1,0 +1,163 @@
+\section{Inquiry, prior work and remaining questions}\label{sec:scope}
+\subsection{Unlearnability is a fixed-target statement}\label{subsec:reach}
+An effective inquiry has finitely encoded histories, a computable
+adaptive controller choosing each finite observation and rational
+estimate, and uniformly computable finite conditional outcome
+probabilities on positive-probability histories. Each successful
+stage finishes in finite time; no computable cost or convergence
+bound is required. The target is fixed independently of the outcome
+tape. Auxiliary finite experiments, including Born-random outcomes,
+are admitted only with the same effective conditional description.
+
+For computable $K$ and the canonical computable seed $\lambda$,
+adaptively chosen finite space-time cylinders of the begun history
+satisfy these hypotheses. Finite-cone sums compute every finite
+joint observation probability uniformly. On a positive-probability
+history, division by its computable positive probability computes
+the next conditional law. The controller chooses finite windows,
+observation times and outputs computably. Thus these observations
+meet the hypotheses of the released fixed-target randomized reach
+theorem \cite[Theorem~21.1]{criticalcurrent}. It follows that
+convergence to one prescribed real with positive probability
+forces that real into $\D_2$. Conversely a program can print a
+chosen computable rational approximation to any $\D_2$ target
+while ignoring observations. This existential converse is not
+one common learner for an unknown system.
+
+The companion proof combines effective sampling, almost-everywhere
+generalized lowness and a relativized positive-measure cone
+argument. Its conclusion concerns a fixed target, not every
+realized random limit. Accordingly, our values outside $\D_2$
+cannot be learned with positive probability by these inquiries at
+computable begun data. Noncomputable kernels or preparations can
+supply advice; no such claim is made for arbitrary noncomputable
+parameters or arbitrarily selected noncomputable stationary laws.
+The realization, consensus and transfer proofs do not depend on
+the companion's inquiry theorem; only this inquiry conclusion
+uses it.
+
+The anchored precursor \cite[Theorem~1.5]{criticalcurrent} uses
+one fixed reliable rule and a distinguished program origin.
+Here the finite program moves into the rule, and self-organization
+removes that origin in the seed. Both cited theorems are in the
+public version 2.1.0 of \emph{Uncomputable critical exponents},
+with version DOI \texttt{10.5281/zenodo.23780285}.
+
+\subsection{Prior mechanisms and the scope of the synthesis}
+Noiseless realization of limit-computable target measures from
+full-support one-cell-shift-ergodic $A$-row laws is due to Hellouin de Menibus
+and Sablik \cite{hdms}. Boyer--Delacourt--Poupet--Sablik--Theyssier
+\cite{boyer} obtain high arithmetic complexity for persistent-word
+languages of noiseless $\mu$-limit sets. These are substantive
+antecedents of the begun construction. Our use is at fixed
+positive noise on an open kernel region, for a uniform real-valued
+readout schema.
+
+Positive-rate storage and reliable computation come from Toom,
+G\'acs--Reif and G\'acs \cite{toom,gacsreif,gacstoom,gacsself}.
+The present paper does not introduce a new reliability paradigm.
+The conditional certificate argument composes their local-tree
+bounds with renewal denominators and continuous quantization.
+G\'acs's self-organizing construction uses manufactured
+synchronization and treats memory and computation initialization
+separately \cite{gacsself}; those features are evidence for a route,
+not proof that every possible construction must contain a clock.
+
+The eternal ceiling uses low basis, compact consensus and
+iterated limits, with Choquet representation for the bounded
+linear extension. The unique-stationary-measure result is already
+Marcovici--Sablik--Taati \cite{marcovici}. Taati \cite{taatinoise}
+proves rapid forgetting for surjective CA with positive additive
+noise. Such results concern particular dynamics and noise models;
+they do not exclude the reliable stacks used here.
+Marsan--Sablik \cite{marsan} study invariant measures in the
+zero-noise limit, including effective constraints and realization
+of connected compact limit sets. Their noise parameter tends to
+zero, whereas ours stays in a fixed positive-rate open region.
+The history/Gibbs correspondence is prior work
+\cite{domany,goldstein,miekisztaati}.
+
+The bounded primary-source comparisons available to us found no
+earlier statement of the full robust renewal realization with its
+seed quantifiers, nor of its all-state fluctuation-transfer and
+effective-consensus comparison. This is a bounded-search outcome,
+not an exhaustive priority claim. Most of the mechanisms above
+are classical; the new statements are the specified compositions
+and quantifiers.
+
+\subsection{What is required, and what is still open}
+At fixed depth, effective stationary consensus is the hypothesis
+that imposes the ceiling. A selected eternal state may carry a
+non-low value. Our beginning supplies one $\Pi^0_2$ stationary
+cluster-class specification, but another noneffective selection
+could supply a similar class. There is no theorem that a physical
+or cosmological beginning is its only possible description.
+
+The world's age is absent from the clock-free cluster readout and,
+after quantization, from the strict begun statistic. Infinite
+cloned redundancy remains in those preparations. Eternal transfer
+needs no cloned initial state, but uses finite cloned-pattern
+weights and an elapsed-time lag; the static form uses a reference
+direction and slab separation. These resources have explicit
+places in the definitions. Neither the eternal observer nor a
+finite simulation completes any of the limits.
+
+\begin{conjecture}[Product-seed realization]
+A TI positive-rate PCA admits a robust begun law outside $\D_2$
+under a target-independent effective readout schema from a full
+product seed, with a suitably specified seed-universality class.
+\end{conjecture}
+Removing the two cloned directions requires a new construction.
+A possible route is a self-organized synchronization layer carrying
+the noiseless segment computation as payload. A self-built clock
+may help; its universal necessity is not proved. The direct
+comparison obstruction in Proposition~\ref{prop:basin} does not
+settle this problem.
+
+\begin{conjecture}[Individual transfer cost and restricted observations]
+Characterize the least eternal depth of a given begun law when
+the physical observation schema is fixed, and determine when
+the sufficient additional limit of Theorem~\ref{thm:transfer}
+is necessary.
+\end{conjecture}
+Constants already show that it is not necessary for every law.
+The arithmetic ceiling proves necessity for values outside the
+lower consensus class, but does not classify all individual
+readouts. A further question is a quantum version with precisely
+specified effective local channels, stationary-state classes and
+conditional observation operations. The classical finite-cone
+identity cannot simply be replaced by conditioning quantum
+states without defining the measurement and disturbance model.
+
+\section*{How this work was done}
+The authors developed the definitions and proofs, checked the
+specified primary statements, and take responsibility for the
+mathematics and attribution. The substantial imported
+self-organization and reliability constructions are identified
+where used; a complete local table for those large automata is
+not generated or exhaustively enumerated here.
+
+The ancillary programs check exact renewal-cylinder identities,
+block-coordinate formulas, finite cones, conditional transfer,
+certificate constants and continuous-quantizer plateaus.
+Independent implementations and explicit counterexamples test
+the limitations of unconditional independence, modal decoding
+and guarded updates. Seeded finite-torus simulations illustrate
+preparation dependence, metastability and failure of particular
+guarded designs. Observations are kept separate from mathematical
+pass conditions; no preregistration claim is made from final files.
+All intended numerical criteria raise on failure.
+
+In particular, high sitewise agreement in a guarded rule-30
+experiment can come from a spatially alternating fixed row rather
+than active computation. Clean-clone tests expose the same design's
+large tracking errors. These are finite-size diagnostics, not
+universal obstructions. The chosen simulation noise values are
+not certified members of the tiny analytic reliability region.
+Every finite positive-rate torus has a unique stationary law;
+its observed branches are finite-time metastability, not distinct
+stationary phases. Exact infinite-volume claims, noncomputability,
+seed universality and every-scale error bounds rest on the proofs.
+The sequential runner records sampled process-tree RSS, not an
+operating-system historical peak. Per-script memory fields may
+be absent where a platform API is unavailable.

@@ -1,0 +1,210 @@
+\section{Renewal targets and reliable realization}\label{sec:renewal}
+\subsection{Encoding a real in gap probabilities}
+Fix $\beta\in\D_3\cap[0,1]$ and uniformly $0'$-computable
+rationals $b_k\in[0,1]$ converging to it. Let the number $G$ of
+zeros between successive ones have distribution
+\begin{equation}\label{eq:gaplaw}
+ p_{2k}=2^{-k}b_k,\qquad
+ p_{2k+1}=2^{-k}(1-b_k),\qquad k\geq1.
+\end{equation}
+The pair weights sum to one. There is a stationary renewal measure
+$\nu_b$ with these independent gaps: choose the block containing
+the origin by the length-biased distribution of $G+1$, place the
+origin uniformly inside that block, and extend by independent gaps
+on both sides. This construction is valid even for a periodic
+renewal process.
+
+\begin{lemma}[Renewal coordinates]\label{lem:renewal}
+Writing $\rho=(1+\mathbb EG)^{-1}$, we have $4\leq\mathbb EG\leq5$
+and, for $m\geq0$,
+\begin{align}
+ \nu_b([0^a1\,0^{g_1}1\cdots0^{g_m}1\,0^b])
+   &=\rho\,\Pr(G\geq a)\prod_{j=1}^m p_{g_j}\Pr(G\geq b),
+       \label{eq:renewalword}\\
+ \nu_b([0^n])&=\rho\sum_{j\geq n}\Pr(G\geq j). \label{eq:zeros}
+\end{align}
+In particular the denominator in
+\begin{equation}\label{eq:gapratio}
+ R_k(\nu)=
+ \frac{\nu([1\,0^{2k}1])}
+ {\nu([1\,0^{2k}1])+\nu([1\,0^{2k+1}1])}
+\end{equation}
+is $\rho2^{-k}\geq2^{-k}/6$ at $\nu_b$, and
+$R_k(\nu_b)=b_k$. The measure $\nu_b$ is limit-computable,
+uniformly from the approximation program.
+\end{lemma}
+\begin{proof}
+Each renewal block has one one and $G$ zeros. Its mean length is
+$1+\mathbb EG$, so renewal starts have intensity $\rho$. Conditional
+on a start, forward and backward gaps have their original independent
+laws. This proves \eqref{eq:renewalword}. There are
+$(G-n+1)_+$ possible starts of an all-zero word of length $n$ within
+a gap, giving \eqref{eq:zeros}. Also
+\[
+ \mathbb EG=\sum_{k\geq1}2^{-k}(2k+1-b_k)\in[4,5].
+\]
+The even and odd specified gaps have total mass $2^{-k}$,
+which proves the ratio assertions, including $b_k=0,1$.
+
+For effective tails use
+\begin{equation}\label{eq:renewaltail}
+ \sum_{k>K}2^{-k}(2k+1)=(2K+5)2^{-K}.
+\end{equation}
+Thus every cylinder coordinate is uniformly $0'$-computable.
+More explicitly, approximate each rational code $b_k$ by a total
+computable array of rational guesses, clamped to $[0,1]$, eventually
+correct for each fixed $k$. At stage $s$ use the first $s$ gap
+pairs and normalize their total $1-2^{-s}$. Their stationary
+finite-state renewal measures are computable. For every fixed
+finite prefix of pairs the guesses settle, while
+\eqref{eq:renewaltail} uniformly controls the remaining mean and
+cylinder errors. These computable measures converge to $\nu_b$.
+The finite algorithm contains no oracle for $0'$.
+\end{proof}
+
+Mixing is not needed and need not hold. If every $b_k=0$, all
+interarrival lengths $G+1$ are even. The intensity is $1/6$, but
+$\nu_b(x_0=x_{2n+1}=1)=0$ at every odd separation. The relevant
+period is that of interarrival lengths, not zero-run lengths.
+
+\subsection{The two realization inputs}
+Hellouin de Menibus--Sablik \cite[Corollary~1]{hdms} prove that
+every limit-computable shift-invariant measure on a finite output
+alphabet is the limit of a CA $F$ on an enlarged alphabet $A$,
+from every full-support shift-ergodic measure on $A^\Z$.
+The target is supported on the output subalphabet; auxiliary symbols
+vanish in the limit. This is the singleton target-measure result;
+no stronger seed-mixing hypothesis for general limit sets is used.
+This seed quantifier concerns the pre-blocking alphabet $A$
+and its one-cell shift. Write $\mu_{\rm row}$ for such an $A$-row
+law. The physical preparation clones its blocked image on
+$\Sigma=A^B$. The canonical uniform Bernoulli row on $\Sigma$
+arises by blocking the uniform Bernoulli row on $A$.
+No claim is made here for arbitrary ergodic physical block-row laws.
+The self-organizer formats segments, computes approximating words,
+copies them and merges segments that are too short. We import this
+finite-rule construction rather than reprove its segment estimates.
+
+Pad the radius of $F$ to an integer $r\geq1$, let $B=2r$, and
+write $(Sx)_i=x_{i+1}$. For $H=S^rF$,
+\begin{equation}\label{eq:blockdrift}
+ H^t(x)_i=F^t(x)_{i+rt}.
+\end{equation}
+Grouping $B$ original cells turns $H$ into a two-block rule $h$
+with neighbourhood $\{0,1\}$ on $\Sigma=A^B$. Before applying
+$h$, take full-symbol NEC majority in every redundant plane, with
+a fixed tie rule for three distinct symbols. The stacked rule
+$G_\beta$ has six parents
+\[
+ \{(0,0,0),(1,0,0),(0,1,0),
+                 (0,0,1),(1,0,1),(0,1,1)\}.
+\]
+It is an ordinary finite-alphabet TI rule; the finite target
+approximation program is part of $F$.
+
+The arbitrary-trajectory reliability theorem of G\'acs--Reif
+\cite{gacsreif}, in the explicit form of Taati--Mi\k{e}kisz
+\cite[Theorem~3.1]{miekisztaati}, applies to every cloned initial
+row and all logical times. For quantitative choices we also use
+G\'acs \cite[Theorem~1]{gacstoom}, whose infinite-plane site-error
+bound is $4D_*\varepsilon$ for
+$D_*=24$ and $\varepsilon<1/(32D_*^8)$. The factor $D_*$
+is part of that bound. These results descend from Toom's
+stability construction \cite{toom}.
+
+Fix the rational number
+\begin{equation}\label{eq:epsilon}
+ \varepsilon_*=\frac1{64D_*^8},\qquad
+ U_\beta=\{K:K(a\mid r)>0,\quad
+          K(G_\beta(r)\mid r)>1-\varepsilon_*\ \text{for all }a,r\}.
+\end{equation}
+Uniform positive rational wrong-symbol noise of total mass
+$\varepsilon_*/2$ gives a computable member. The set is nonempty
+and relatively open. Conditional probabilities of actual faults
+are at most $\varepsilon_*$; conditioning backwards through time
+layers gives the finite joint-fault bound required by reliability.
+Actual fault indicators need not be unconditionally independent.
+The one-site error is at most $96\varepsilon_*<1/20$.
+
+\subsection{Age-dependent amplification}
+At integer $t\geq2$ use the odd integer schedule
+\[
+ m_t=2\lceil\log_2t\rceil^2+1
+\]
+and copies spaced by $2t+1$ in the $a$ direction. This integer
+rounded log-squared schedule is computed by bit length and has
+the required growth and summability. Decode a blocked symbol by
+strict majority, using a fixed default if no symbol has a majority,
+and then unpack the $B$ original coordinates. These operations are
+one schema on labelled block alphabets.
+
+Conditional on the whole seed row $Y=y$, the initial data are
+deterministic. Separated endpoint cones use disjoint update coins,
+so their symbols are conditionally independent. Each has the same
+intended symbol and error at most $1/20\leq1/4$. Hoeffding gives
+\begin{equation}\label{eq:age-error}
+ \Pr(\text{wrong decoded block}\mid Y=y)\leq e^{-m_t/8}=:e_t.
+\end{equation}
+For a fixed original word $u$, let $W$ be the finitely many
+blocks covering it. A union bound and integration over $y$ yield
+\begin{equation}\label{eq:worderror}
+ \left|\Pr_{\lambda P_K^t}(\text{decoded }u)
+                      -(F_*^t\mu_{\rm row})([u])\right|\leq |W|e_t.
+\end{equation}
+Here $\mu_{\rm row}$ is the pre-blocking $A$-row law.
+Its one-cell shift invariance passes to $F_*^t\mu_{\rm row}$,
+so \eqref{eq:blockdrift} causes no moving-frame correction:
+that invariance absorbs the drift $rt$ on the original cells.
+Block-shift invariance alone would not justify this step.
+There is still age in the copy geometry.
+
+\begin{proof}[Proof of the depth-one part of Theorem~\ref{thm:realization}]
+Apply \eqref{eq:worderror} to the two gap words in
+\eqref{eq:gapratio}. The noiseless probabilities converge to
+their renewal values by the self-organization input. Their
+limiting sum is $\rho2^{-k}>0$, so the inner time limit of the
+decoded ratio exists and equals $b_k$ for every fixed $k$.
+Every finite-time denominator is positive: a finite assignment of
+the copies can realize either binary word, and positive-rate
+updates give it positive probability. The initial full-support
+cloned row also gives these events positive probability.
+Taking $k\to\infty$ gives $\beta$. The bound is uniform over
+$U_\beta$ and over row contents. The noiseless theorem applies to every full-support,
+one-cell-shift-invariant ergodic law on $A^\Z$. Thus the same
+value holds for clones of their blocked images, including
+noncomputable admitted row laws. It is not asserted for every
+shift-ergodic law on $\Sigma^\Z$. For the
+arithmetic upper bound and later inquiry statement, use the
+canonical computable row. Theorem~\ref{thm:ceilings} gives the
+reverse inclusion. The image is over finite rules and their
+labelled block presentations, not one universal alphabet.
+\end{proof}
+
+\subsection{Attainment at every finite depth}
+\begin{proof}[Proof of the remaining part of Theorem~\ref{thm:realization}]
+For $d\geq1$ and $\beta\leq_T0^{(d+1)}$, iterated relativized
+real limit approximation gives rationals
+$b_{k_1,\ldots,k_d}\in[0,1]$, uniformly $0'$-computable, whose
+$d$ prescribed nested limits exist and equal $\beta$. This uses
+real Cauchy names and uniform limit approximation, not uniformly
+decidable strict cuts of arbitrary oracle reals. Fix a computable
+bijection $p_d$ from positive $d$-tuples to positive integers.
+Put $b_{\mathbf k}$ into gap pair $p_d(\mathbf k)$ in
+\eqref{eq:gaplaw}. The same geometric bound controls all tails,
+so the renewal measure is still limit-computable. Use the same
+uniform readout schema, now asking gap question $p_d(\mathbf k)$.
+Its inner time limit is $b_{\mathbf k}$ and the $d$ outer limits
+give $\beta$. Every intermediate limit is part of the hypothesis
+on that chosen array; arbitrary programs are not presumed to
+converge.
+
+At $d=0$, choose a limit-computable Bernoulli target with parameter
+$\beta\in\D_2\cap[0,1]$. Its cylinder probabilities are limits of
+computable probabilities by a computable rational approximation to
+$\beta$. Apply the same noiseless realization and reliable stack,
+then read the decoded one-site probability with \eqref{eq:age-error}.
+Its single time limit is $\beta$. Endpoints zero and one are
+allowed target measures even though the initial row has full support.
+The ceilings in Theorem~\ref{thm:ceilings} give exactness at each
+depth. The schema is fixed separately for each $d$.
+\end{proof}

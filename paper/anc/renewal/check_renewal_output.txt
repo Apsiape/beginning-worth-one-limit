@@ -1,0 +1,24 @@
+C1 renewal identities (exact rational arithmetic): PASS (30 rows)
+C2 EG <= 5 and nu(x0 != x1) >= 1/3: PASS
+C3 start=clone Bernoulli                               p=0.05  eps=0.0    t=120  raw=1.0     decoded=1.0    t=10 decoded=0.4896
+C3 start=clone Bernoulli                               p=0.3   eps=0.0    t=120  raw=1.0     decoded=1.0    t=10 decoded=1.0
+C3 start=clone Bernoulli                               p=0.7   eps=0.0    t=120  raw=1.0     decoded=1.0    t=10 decoded=1.0
+C3 start=clone all-0                                   p=0.0   eps=0.0    t=120  raw=0.0     decoded=0.0    t=10 decoded=0.0
+C3 start=clone Bernoulli                               p=0.05  eps=0.005  t=120  raw=0.9949  decoded=1.0    t=10 decoded=0.4062
+C3 start=clone Bernoulli                               p=0.3   eps=0.005  t=120  raw=0.9955  decoded=1.0    t=10 decoded=0.9583
+C3 start=clone Bernoulli                               p=0.7   eps=0.005  t=120  raw=0.995   decoded=1.0    t=10 decoded=1.0
+C3 start=clone all-0                                   p=0.0   eps=0.005  t=120  raw=0.0054  decoded=0.0    t=10 decoded=0.0
+C3 start=clone Bernoulli                               p=0.05  eps=0.02   t=120  raw=0.9783  decoded=1.0    t=10 decoded=0.4062
+C3 start=clone Bernoulli                               p=0.3   eps=0.02   t=120  raw=0.9792  decoded=1.0    t=10 decoded=1.0
+C3 start=clone Bernoulli                               p=0.7   eps=0.02   t=120  raw=0.98    decoded=1.0    t=10 decoded=1.0
+C3 start=clone all-0                                   p=0.0   eps=0.02   t=120  raw=0.0234  decoded=0.0    t=10 decoded=0.0
+C3 start=product Bernoulli (no clone)                  p=0.05  eps=0.005  t=120  raw=0.0046  decoded=0.0    t=10 decoded=0.0
+C3 start=product Bernoulli (no clone)                  p=0.3   eps=0.005  t=120  raw=0.9945  decoded=1.0    t=10 decoded=1.0
+C3 start=clone all-0, high noise (forgetting control)  p=0.0   eps=0.35   t=40   raw=0.6182  decoded=0.8325 t=10 decoded=0.826
+C3 selection by the beginning (two eternal phases, seed- and noise-independent begun law): PASS
+C4 torus 2x2x3 eps=0.03: median escape 60.5, max 223, censored 0/12
+C4 torus 3x3x3 eps=0.03: median escape 224.5, max 811, censored 0/12
+C4 torus 4x4x3 eps=0.03: median escape 1364.0, max 4792, censored 0/12
+C4 torus 5x5x3 eps=0.03: median escape 2064.0, max 6977, censored 0/12
+C4 finite-torus forgetting (escape time grows with redundancy): PASS
+ALL PASS runtime 3.32 s, peak working set None bytes

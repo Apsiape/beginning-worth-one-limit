@@ -1,0 +1,285 @@
+{
+  "renewal": {
+    "all_binary_words_length_1_to_8": 1530,
+    "pass": true,
+    "beta_k_all_zero_interarrival_period": 2
+  },
+  "blocking": {
+    "coordinate_comparisons": 1344,
+    "pass": true
+  },
+  "cones": [
+    {
+      "t": 1,
+      "fault_vertices": 1,
+      "initial_sites": 6,
+      "disjoint": true
+    },
+    {
+      "t": 2,
+      "fault_vertices": 7,
+      "initial_sites": 18,
+      "disjoint": true
+    },
+    {
+      "t": 3,
+      "fault_vertices": 25,
+      "initial_sites": 40,
+      "disjoint": true
+    },
+    {
+      "t": 4,
+      "fault_vertices": 65,
+      "initial_sites": 75,
+      "disjoint": true
+    },
+    {
+      "t": 5,
+      "fault_vertices": 140,
+      "initial_sites": 126,
+      "disjoint": true
+    },
+    {
+      "t": 6,
+      "fault_vertices": 266,
+      "initial_sites": 196,
+      "disjoint": true
+    },
+    {
+      "t": 7,
+      "fault_vertices": 462,
+      "initial_sites": 288,
+      "disjoint": true
+    },
+    {
+      "t": 8,
+      "fault_vertices": 750,
+      "initial_sites": 405,
+      "disjoint": true
+    }
+  ],
+  "unconditional_error_correlation": {
+    "epsilon": "1/50",
+    "p_error": "3/200",
+    "p_both": "1/4000",
+    "covariance_at_any_separation": "1/40000",
+    "proposed_decaying_unconditional_covariance_bound_is_false": true
+  },
+  "xor_noiseless_validation": {
+    "horizons": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "pass": true
+  },
+  "independent_xor_monte_carlo": [
+    {
+      "t": 2,
+      "epsilon": 0.02,
+      "seed_p": 0.17,
+      "trials": 4096,
+      "endpoints_per_trial": 17,
+      "logical_density": 0.278076171875,
+      "single_endpoint_error": 0.02267635569852941,
+      "wrong_majority_counts": {
+        "1": 106,
+        "3": 4,
+        "5": 0,
+        "9": 0,
+        "17": 0
+      },
+      "certified_fault_vertices": 7,
+      "certified_single_error_bound": 0.13187446675328007,
+      "hoeffding_bounds": {
+        "1": 0.7625914704447228,
+        "3": 0.44348182922967316,
+        "5": 0.25790497334332996,
+        "9": 0.08722229116519492,
+        "17": 0.00997615154503291
+      },
+      "observed_rates_below_bounds": true
+    },
+    {
+      "t": 4,
+      "epsilon": 0.002,
+      "seed_p": 0.61,
+      "trials": 4096,
+      "endpoints_per_trial": 17,
+      "logical_density": 0.47314453125,
+      "single_endpoint_error": 0.002197265625,
+      "wrong_majority_counts": {
+        "1": 10,
+        "3": 0,
+        "5": 0,
+        "9": 0,
+        "17": 0
+      },
+      "certified_fault_vertices": 65,
+      "certified_single_error_bound": 0.12201886647792426,
+      "hoeffding_bounds": {
+        "1": 0.7514583644400845,
+        "3": 0.42434077845472157,
+        "5": 0.23962085563280205,
+        "9": 0.07640896311930567,
+        "17": 0.007769332169610727
+      },
+      "observed_rates_below_bounds": true
+    },
+    {
+      "t": 6,
+      "epsilon": 0.0004,
+      "seed_p": 0.17,
+      "trials": 4096,
+      "endpoints_per_trial": 17,
+      "logical_density": 0.39794921875,
+      "single_endpoint_error": 0.00022977941176470588,
+      "wrong_majority_counts": {
+        "1": 0,
+        "3": 0,
+        "5": 0,
+        "9": 0,
+        "17": 0
+      },
+      "certified_fault_vertices": 266,
+      "certified_single_error_bound": 0.10095418684080848,
+      "hoeffding_bounds": {
+        "1": 0.7272571704345869,
+        "3": 0.38464849335886914,
+        "5": 0.20344173898599704,
+        "9": 0.05691046144916523,
+        "17": 0.004453446117858848
+      },
+      "observed_rates_below_bounds": true
+    }
+  ],
+  "independent_or_torus": [
+    {
+      "start": "clone",
+      "p": 0.08,
+      "replicates": 8,
+      "lattice": [
+        16,
+        16,
+        64
+      ],
+      "T": 96,
+      "epsilon": 0.005,
+      "decoded_densities": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mean_raw_density": 0.9949493408203125,
+      "all_zero_finite_seed_count": 0
+    },
+    {
+      "start": "clone",
+      "p": 0.32,
+      "replicates": 8,
+      "lattice": [
+        16,
+        16,
+        64
+      ],
+      "T": 96,
+      "epsilon": 0.005,
+      "decoded_densities": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mean_raw_density": 0.9951858520507812,
+      "all_zero_finite_seed_count": 0
+    },
+    {
+      "start": "clone_zero",
+      "p": 0.0,
+      "replicates": 8,
+      "lattice": [
+        16,
+        16,
+        64
+      ],
+      "T": 96,
+      "epsilon": 0.005,
+      "decoded_densities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_raw_density": 0.00502777099609375,
+      "all_zero_finite_seed_count": 8
+    },
+    {
+      "start": "product",
+      "p": 0.02,
+      "replicates": 8,
+      "lattice": [
+        16,
+        16,
+        64
+      ],
+      "T": 96,
+      "epsilon": 0.005,
+      "decoded_densities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_raw_density": 0.00557708740234375,
+      "all_zero_finite_seed_count": 0
+    },
+    {
+      "start": "product",
+      "p": 0.32,
+      "replicates": 8,
+      "lattice": [
+        16,
+        16,
+        64
+      ],
+      "T": 96,
+      "epsilon": 0.005,
+      "decoded_densities": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mean_raw_density": 0.9950637817382812,
+      "all_zero_finite_seed_count": 0
+    }
+  ],
+  "runtime_s": 0.7697,
+  "peak_working_set_bytes": null,
+  "numpy_version": "2.4.3",
+  "numerical_threads_requested": 1
+}

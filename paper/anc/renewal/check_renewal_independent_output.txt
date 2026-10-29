@@ -1,0 +1,13 @@
+Renewal countdown-chain identities: 1530 exact word comparisons PASS; all-zero beta has period 2.
+One-sided blocking/drift: 1344 coordinate comparisons PASS.
+Exact six-parent cones and spacing 2t+1: horizons 1 through 8 PASS.
+Cloned-row covariance counterexample: exact covariance 1/40000, independent of separation.
+Exact-cone XOR t=2, eps=0.02, p=0.17: site error 0.0226764, wrong majorities {1: 106, 3: 4, 5: 0, 9: 0, 17: 0}.
+Exact-cone XOR t=4, eps=0.002, p=0.61: site error 0.0021973, wrong majorities {1: 10, 3: 0, 5: 0, 9: 0, 17: 0}.
+Exact-cone XOR t=6, eps=0.0004, p=0.17: site error 0.0002298, wrong majorities {1: 0, 3: 0, 5: 0, 9: 0, 17: 0}.
+OR torus clone p=0.08: 8 decoded densities [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]; raw mean 0.9949493.
+OR torus clone p=0.32: 8 decoded densities [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]; raw mean 0.9951859.
+OR torus clone_zero p=0.0: 8 decoded densities [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]; raw mean 0.0050278.
+OR torus product p=0.02: 8 decoded densities [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]; raw mean 0.0055771.
+OR torus product p=0.32: 8 decoded densities [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]; raw mean 0.9950638.
+Finished in 0.7697 s; peak working set None bytes.

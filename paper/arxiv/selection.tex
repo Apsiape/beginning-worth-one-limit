@@ -1,0 +1,170 @@
+\section{Selection, separated phases and product seeds}\label{sec:selection}
+\subsection{What a beginning specifies}
+\begin{proposition}[Selection bounds]\label{prop:selection}
+If a computable begun orbit converges, its limit is a
+$0'$-computable stationary state, TI for a TI seed. In general
+both ordinary and Ces\`aro cluster classes have $\Pi^0_2$
+valid-code descriptions; only the latter is automatically
+stationary. At computable $K$, a depth-$d$ law at a state named by $X$ is computable
+from $X^{(d)}$. For $d\geq1$, a selected value outside
+$\D_{d+1}$ forces the state to have no low name.
+\end{proposition}
+\begin{proof}
+Each limiting cylinder coordinate of a convergent computable
+orbit is a uniformly computable-sequence limit, hence uniformly
+$0'$-computable. Weak continuity gives stationarity. The cluster
+formula \eqref{eq:cluster-pi2} applies to any computable measure
+sequence, including ordinary orbits. Equation~\eqref{eq:cesaro-residual}
+supplies the additional stationarity for Ces\`aro clusters.
+The relative law bound is the iterated limit argument of
+Section~\ref{sec:consensus}. At $d\geq1$, a low name satisfies
+$X^{(d)}\equiv_T0^{(d)}$, proving the last assertion.
+\end{proof}
+
+There is no unrestricted one-jump point-selection conclusion.
+A $\Pi^0_2$ description of a nonempty compact cluster class
+does not supply a $0'$-computable member. Computable bounded
+sequences can lack any limit-computable accumulation point
+\cite[Corollary~11.8]{bgm}. This does not by itself exhibit a
+positive-rate PCA with that property; it invalidates the inference
+from description complexity alone.
+
+The restriction $d\geq1$ in the non-lowness statement matters.
+Take a noncomputable low set $A$ and its base-four Cantor real
+$r$, of the same degree. In the computable identity CA,
+$(1-r)\delta_{0^\Z}+r\delta_{1^\Z}$ is stationary, has a low name,
+and its depth-zero local expectation is the noncomputable $r$.
+No effective class pins that expectation. This example concerns
+the general computable-PCA selection statement; the identity
+rule is not a positive-rate realization.
+
+Ordinary accumulation need not mean stationarity, even with
+positive rates. Let $T$ be symmetric low-noise binary Toom
+dynamics and $C$ global complement. They commute, and
+$T^t\delta_0\to\mu_-$, $T^t\delta_1\to\mu_+$ with
+$\mu_-\ne\mu_+$. For $P=CT$, the even and odd subsequences
+from $\delta_0$ tend to $\mu_-$ and $\mu_+$, which $P$
+interchanges. Neither is $P$-stationary. The Ces\`aro orbit
+converges to their stationary equal mixture.
+
+\subsection{Sharpness and unrestricted mixtures}
+The Toom phases in this example follow from the classical
+stability theorem \cite{toom,gacstoom}. At computable symmetric
+noise $p<1/2$, the kernel is attractive. Starting from the two
+constant configurations gives monotone measure sequences and
+stationary limits $\mu_+,\mu_-$ with local one probabilities
+$m>1/2$ and $1-m$. Stability supplies a uniform separation.
+Their increasing-event probabilities are monotone limits of
+computable values; arbitrary cylinder coordinates follow by
+finite inclusion-exclusion. Both phase measures are uniformly
+$0'$-computable.
+
+For any real $r\in[0,1]$ their mixture has
+\begin{equation}\label{eq:mixture}
+ \mu_r=r\mu_++(1-r)\mu_-,\qquad
+ \mu_r(x_0=1)=1-m+r(2m-1).
+\end{equation}
+Free selection therefore gives a nondegenerate interval of
+depth-zero eternal values, including nonarithmetical ones.
+No arithmetic ceiling applies to arbitrary selected states.
+No robust growing-majority formula for recovering $r$ is needed.
+
+This also gives the depth-zero specification boundary. If $m$
+is noncomputable choose $r=0$. Otherwise choose a noncomputable
+$r\in\D_2\cap[0,1]$; the local expectation in \eqref{eq:mixture}
+then computes $r$ and is noncomputable. In both cases $\mu_r$
+is a limit of computable genuine measures: approximate the
+weight rationally and use finite Toom evolutions from the
+constant seeds. Its singleton consequently has the $\Pi^0_2$
+cluster description, but cannot be a nonempty effective
+$\Sigma^0_2$ consensus class for that depth-zero statistic.
+Theorem~\ref{thm:clockfree} supplies the robust depth-one
+boundary with an entire stationary Ces\`aro cluster class.
+
+\subsection{Separated stationary phases in the realization}
+\begin{proposition}[Scoped divergence in one automaton]
+\label{prop:divergence}
+For every $K\in U_\beta$ in the realization there are separated
+extreme stationary TI states. At computable $K$, a nonempty
+effective $\Sigma^0_2$ stationary class cannot have any
+depth-one consensus outside $\D_2$, whereas the canonical begun
+law is $\beta$. The statement concerns the same dynamics.
+\end{proposition}
+\begin{proof}
+The finite diagonal symbol map of $F$ has a periodic orbit.
+Start the noisy stack from its spatially constant cloned row.
+Let $E$ mean that original offsets zero and one in a block agree;
+$B=2r\geq2$ makes this a one-block event. Full-symbol reliability
+gives $\Pr(E)\geq19/20$ at all times. Every Ces\`aro cluster
+state $\mu_c$ therefore has $\mu_c(E)\geq19/20$.
+
+From the canonical cloned Bernoulli seed, the noiseless pair-disagreement
+probability tends to $2/(1+\mathbb EG)\geq1/3$, since every one
+in the renewal measure is flanked by zeros. Reliability gives
+$\mu_b(E)\leq2/3+1/20=43/60$ in every begun Ces\`aro cluster
+state. Both classes are stationary TI by Ces\`aro averaging.
+Maximize and minimize the continuous affine functional $\mu(E)$
+over the compact convex stationary class. The corresponding
+extremizing faces contain extreme points of the full class,
+so separated extreme phases exist.
+
+At computable $K$ the nonempty region
+$R=\{\mu\in\ST(K):\mu(E)\leq3/4\}$ is effectively closed.
+It contains all the begun Ces\`aro cluster states and excludes
+the constant-trajectory class. The consensus exclusion follows
+from Theorem~\ref{thm:ceilings}; the begun value follows from
+Theorem~\ref{thm:realization}. When $\beta\notin\D_2$ the
+clock-free selected cluster class is a strictly more restrictive
+specification than any such effective closed consensus class.
+\end{proof}
+
+\subsection{Two limited product-seed obstructions}
+\begin{proposition}[Finite-time cones and invariant decoders]
+\label{prop:product}
+From an i.i.d.\ seed, time-$t$ restrictions to sets separated by
+more than $2rt$ are independent for a radius-$r$ PCA. At fixed
+finite $t$, a measurable symbol decoder invariant under both
+transverse shifts is almost surely constant. A countable row of
+such decoded symbols is deterministic; it is homogeneous if the
+decoder is also equivariant under longitudinal shifts.
+\end{proposition}
+\begin{proof}
+Restrictions are functions of the initial symbols and update
+coins in their backward cones. At the stated separation these
+input sets are disjoint. A fixed-time plane field is a finite-range
+factor of the i.i.d.\ input slab, hence mixing and ergodic under
+transverse shifts. An invariant finite-valued function is
+therefore almost surely constant. Countable intersection gives
+a deterministic row. Longitudinal equivariance and TI force its
+coordinates to agree. Without that equivariance a decoder could
+output a predetermined alternating row.
+\end{proof}
+
+Independent odd majorities need not converge to a deterministic
+word: a reset PCA outputting fair bits has fair majority at every
+copy count. Strict full-symbol majority also differs from
+plurality when, for example, probabilities are $(.4,.35,.25)$.
+We do not use a universal modal-word conclusion.
+
+\begin{proposition}[Direct comparison to a cloned reference]
+\label{prop:basin}
+An i.i.d.\ seed with marginal $q$ can disagree with a cloned row
+on a set of plane density less than one half in every plane
+only when that row is homogeneous.
+\end{proposition}
+\begin{proof}
+Simultaneous strong laws for the finitely many symbols and
+countably many planes give disagreement density $1-q(y(i))$.
+Thus $q(y(i))>1/2$ in every plane. At most one symbol can satisfy
+this inequality, so $y$ is constant, even if selected after
+observing the configuration. A deterministic finite-alphabet
+line rule takes homogeneous rows through an eventually periodic
+computable symbol orbit.
+\end{proof}
+This excludes only direct initialization of a nonhomogeneous
+cloned reference by treating the raw product seed as its sparse
+perturbation. It excludes neither preprocessing, changing local
+references, hierarchical encoding nor self-organizing correction.
+Density less than one half is not the full hypothesis of every
+fault theorem. No universal impossibility or clock-necessity
+claim follows.

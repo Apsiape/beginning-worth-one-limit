@@ -1,0 +1,119 @@
+\section{Effective consensus and arithmetic ceilings}\label{sec:consensus}
+\subsection{Finite probabilities and compact stationary classes}
+For any computable initial measure, the probability of a fixed
+time-$t$ cylinder is uniformly computable. Enumerate assignments
+on its finite backward cone and sum the initial cylinder weights
+times products of the corresponding transition probabilities.
+The number of terms is immaterial to computability. The same formula
+shows that $\mu\mapsto\mu P_K$ is computable and weakly continuous.
+
+\begin{lemma}[Effective stationary classes]\label{lem:stationary}
+For computable $K$, the valid Cantor codes of $\ST(K)$ form a
+nonempty $\Pi^0_1$ class. Adding uniformly computable non-strict
+cylinder inequalities keeps the class effectively closed.
+Every nonempty such class has a low member.
+\end{lemma}
+\begin{proof}
+For a cylinder indicator $f$, stationarity is the equation
+$\mu(f)=\mu(P_Kf)$. The latter function is a finite computable
+linear combination of cylinder indicators. Normalization,
+marginal consistency, TI equations and stationarity are a
+computable list of equalities of computable continuous coordinate
+functions. Failure has a finite positive-precision witness.
+The same holds for failure of a non-strict inequality.
+
+Take any TI seed and let
+$C_T=T^{-1}\sum_{t<T}\lambda P_K^t$. Compactness supplies cluster
+states, TI passes to limits, and for $|f|\leq1$,
+\begin{equation}\label{eq:cesaro-residual}
+ |C_T(P_Kf)-C_T(f)|\leq 2/T.
+\end{equation}
+Every such cluster state is stationary, proving nonemptiness.
+
+Apply the low basis theorem of Jockusch--Soare \cite{lowbasis}.
+Here is the particular compact argument. Starting with a nonempty
+effective closed code class $P_e$, let $V_e$ be the effective open
+set of oracles on which machine $e$ halts on input $e$. Emptiness
+of $P_e\setminus V_e$ is semidecidable by finite-cover compactness,
+and hence decidable by $0'$. Retain that difference if nonempty;
+otherwise retain $P_e$. The previous finite choices can be
+hard-coded into an ordinary index for the next closed class.
+The nested compact intersection is nonempty. Every code in it
+has exactly the $0'$-computable jump answers just recorded.
+Its jump is therefore equivalent to $0'$. This is an existence
+argument for a low state, not a computable point selector.
+\end{proof}
+
+\subsection{Consensus, including the zero-depth case}
+\begin{proof}[Proof of Theorem~\ref{thm:ceilings}]
+On a low name $X$ in an effective closed class, all finite statistics
+are uniformly $X$-computable. Replace each real term of a converging
+sequence by a rational within $2^{-s}$. With $X'$, decide whether a
+candidate rational Cauchy-tail bound fails: failure is an existential
+statement about rational terms. Search for a tail satisfying a
+slightly stronger bound than the requested tolerance. Its limit is
+$X'$-computable. Relativize uniformly in all remaining indices and
+iterate. At depth $d\geq1$ the value is computable from
+$X^{(d)}\equiv_T0^{(d)}$, hence belongs to $\D_{d+1}$.
+
+At $d=0$, lowness alone is insufficient. Instead let $P$ be the
+nonempty effective compact code class and $s$ the computable
+continuous statistic, defined on it and constant with value $v$.
+Enumerate rational open intervals $I$ of width at most $2^{-n}$.
+The condition $P\subset s^{-1}(I)$ is semidecidable: the effective
+open complement of $P$ together with the effective open preimage
+must cover Cantor space, and a finite basic cover witnesses this.
+An interval containing $v$ in its interior eventually succeeds.
+Its midpoint computes $v$ to the required precision. Partial
+definedness causes no difficulty because the compact class is
+contained in the statistic's open domain.
+
+For a nonempty effective $\Sigma^0_2$ code class, choose a nonempty
+closed piece. The common value on that piece has the preceding
+bound. The choice is a finite nonuniform constant; no algorithm
+selecting the piece is claimed. Pieces need not be saturated under
+alternative names, since their decoded images remain effectively
+compact and the value agrees on all their codes.
+
+For the pure-state assertion, $\ST(K)$ is metrizable compact
+convex. Choquet representation \cite{choquet} expresses each
+member as a barycentre of a probability measure on its extreme
+boundary. For bounded linear statistics,
+$\mu(F_{\mathbf k})=\int e(F_{\mathbf k})\,dw_\mu(e)$.
+At each fixed outer tuple the innermost pointwise limit on extreme
+states is bounded Borel. Dominated convergence moves that limit
+through the integral. Repeat through every remaining limit.
+All intermediate mixture limits exist, and agreement at the
+extremes forces agreement everywhere. No effective decomposition
+or effective presentation of the extreme boundary is required.
+
+At computable $\lambda,K$, finite-time statistics in
+\eqref{eq:begun} are uniformly computable. One time limit and $d$
+scale limits give a value computable in $0^{(d+1)}$. For a robust
+value, evaluate at a rational kernel in the nonempty open region.
+Equality transfers that absolute ceiling to all kernels there;
+there is no uniform procedure locating this witness from an
+arbitrary presentation of the open set.
+
+Finally, finite stationary-history cylinders are computable from
+the state name and $K$ by finite-cone sums. Thus the same argument
+works for these readouts. Each limiting lag is an index among the
+$d$ limits, not a free observation-time operation.
+\end{proof}
+
+The pure-state extension is specifically linear and bounded.
+The nonlinear map $p\mapsto p(1-p)$, where $p=\mu(x_0=1)$,
+vanishes on the two constant-state phases of the noiseless AND
+automaton but equals $1/4$ at their equal mixture. This already
+shows why the Choquet step cannot be applied to arbitrary ratios.
+To check the example, TI stationarity for AND gives
+$\mu(1)=\mu(11)$, hence $\mu(10)=\mu(01)=0$, so the stationary TI
+class consists exactly of those constant-state mixtures.
+
+Computability of a unique invariant measure for a computable PCA
+was proved by Marcovici--Sablik--Taati
+\cite[Proposition~2.2]{marcovici}. The compact-consensus mechanism
+also belongs to the effective invariant-measure framework of
+Galatolo--Hoyrup--Rojas \cite{ghr}. Our comparison uses these
+classical principles for nested laws, rather than claiming a new
+computability mechanism for unique stationary measures.

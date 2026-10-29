@@ -1,0 +1,106 @@
+\section{Exact fluctuation transfer}\label{sec:transfer}
+\subsection{Finite patterns and their future cones}
+\begin{lemma}[Positive patterns and the conditional cone identity]
+\label{lem:fluctuation}
+If $K$ has positive rates, every stationary state satisfies
+$\mu([w]_B)\geq\kappa(K)^{|B|}$ for every finite $B$ and pattern
+$w$. For any initial law $\nu$, output window $W$, lag $t$, and
+$B$ containing the whole depth-$t$ backward dependency region,
+\begin{equation}\label{eq:conditional}
+ \Pr_\nu(X_t|_W=u\mid X_0|_B=w)=g_{K,t}(w;u)
+\end{equation}
+whenever the conditioning event has positive probability. The
+function $g_{K,t}$ is independent of the exterior distribution.
+\end{lemma}
+\begin{proof}
+Stationarity and conditionally independent site updates give
+\[
+ \mu([w]_B)=
+ \int\prod_{z\in B}K(w_z\mid x|_{z+N})\,d\mu(x)
+ \geq\kappa(K)^{|B|}.
+\]
+In the graphical construction, the output on $W$ at time $t$
+is a fixed function of $X_0|_B$ and finitely many future uniforms,
+independent of the initial state. Conditioning on the whole
+pattern $w$ fixes every relevant initial input. Every global
+extension therefore has the same conditional output law.
+A sufficient region for radius $r$ is $B=W+[-rt,rt]^D$.
+Conditioning on only part of it is insufficient in general.
+\end{proof}
+
+\subsection{Reweighting the fluctuations}
+\begin{proof}[Proof of Theorem~\ref{thm:transfer}]
+Express the source's finitely many cylinder functions as finite
+linear combinations of pattern indicators on one common output
+window $W_{\mathbf k,t}$. Choose its whole backward region $B$.
+For each output pattern $u$ and stationary $\mu$, set
+\begin{equation}\label{eq:reweight}
+ q_u(\mu)=
+ \sum_{w\in\Sigma^B}\lambda([w]_B)
+ \frac{\Pr_\mu(X_0|_B=w,\ X_t|_W=u)}{\mu([w]_B)}.
+\end{equation}
+All denominators are positive by Lemma~\ref{lem:fluctuation}.
+Its conditional identity gives the exact finite equality
+\begin{equation}\label{eq:transferexact}
+ q_u(\mu)=\sum_w\lambda([w]_B)g_{K,t}(w;u)
+                         =(\lambda P_K^t)([u]).
+\end{equation}
+Evaluate the source's $R_{\mathbf k,t}$ on these probabilities.
+The transferred statistic equals the source statistic at every
+finite tuple and lag, in every stationary state. Its iterated
+limits exist whenever the source limits do, with the same order
+and value.
+
+The sum is finite, its weights are computable, and division is
+computable on the positive-denominator domain without a supplied
+uniform lower bound. The source domain pulls back to an effectively
+open domain. Thus the new statistics are admissible finite
+space-time functionals. Counting $t$ as one added innermost
+index gives depth $d+1$. The transformation uses the specified
+seed, family and geometry and no target oracle. It preserves
+target independence where those inputs have it. Equality
+\eqref{eq:transferexact} also proves the robustness assertion.
+\end{proof}
+
+The weights are essential. Waiting for an unspecified fluctuation
+samples patterns with frequencies $\mu([w]_B)$, not
+$\lambda([w]_B)$. One interpretation first samples a desired
+pattern with the source's computable finite law, then waits for
+it. Conditional on the past its chance at each next update is
+at least $\kappa^{|B|}$; avoiding it for $n$ updates has probability
+at most $(1-\kappa^{|B|})^n$. The local Markov identity applies
+after that occurrence. This concerns repeated finite events,
+not one positive-probability event containing an entire infinite
+cloned beginning. No useful uniform sampling efficiency is claimed.
+
+For the canonical cloned uniform row the weights have a simple
+schema: a finite pattern has zero weight unless transverse sites
+at each common line coordinate agree; otherwise its weight is
+$|\Sigma|^{-j}$, for $j$ distinct specified line coordinates.
+Alphabet and block metadata determine these numbers. They contain
+neither $\beta$ nor its approximants. Finite cloned patterns
+remain explicit in the readout, although cloning is not a required
+initial condition of the eternal world.
+
+\begin{proof}[Proof of Corollary~\ref{cor:sharp}]
+Transfer each realization of Theorem~\ref{thm:realization},
+including the tuple-indexed ones. This attains every $\D_{d+2}$
+value at eternal depth $d+1$ in every stationary state. For the
+upper bound, restrict all-state consensus to the nonempty
+$\ST(K)$ at a computable kernel in the robust region and apply
+Theorem~\ref{thm:ceilings}. At depth $d$ its ceiling is
+$\D_{d+1}$, so a value outside that class cannot have such a
+consensus realization. Over all admissible readouts, lower-level
+values can also be attained by computable arrays of constants.
+This does not say that one fixed gap formula attains every value
+in one fixed automaton.
+\end{proof}
+
+The transfer is a use of the Markov property and positive rates.
+For fixed $K$, its finite values can also be computed directly
+from $\lambda,K$ and are independent of $\mu$. This breadth
+comes from the admitted class of probability functionals.
+The result is not a theorem that a bounded local observer
+efficiently estimates these ratios, nor a minimal-cost theorem
+for every source law. The arithmetic obstruction is sharp for
+values outside the lower consensus ceiling.

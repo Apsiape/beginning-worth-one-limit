@@ -1,0 +1,159 @@
+\section{A clock-free law on late states}\label{sec:clockfree}
+Age-dependent cone separation proves Theorem~\ref{thm:realization},
+but does not produce a fixed statistic of a late state. We localize
+error certificates with a seed-independent fault envelope.
+Independence belongs to local certificate events, not actual errors.
+
+\subsection{Independent local certificates}
+Implement updates with independent uniforms $U_{z,t}$, putting the
+deterministic output first in the sampling interval. Actual faults
+are contained in the independent envelope
+\[
+ {\cal F}=\{(z,t):U_{z,t}\geq1-\varepsilon_*\}.
+\]
+It is independent of the seed. Put
+\[
+ D_*=24,\quad c=16D_*^8\varepsilon_*=\tfrac14,\quad
+ \delta_*=(1+8D_*)\varepsilon_*\leq\tfrac1{16}.
+\]
+G\'acs's explanation-tree and weighted-tree counting lemmas
+\cite[Lemmas~2.3 and 2.6]{gacstoom}, in the PDF numbering, give:
+a nonfaulty error has an explanation with $n$ fault vertices and
+at most $4(n-1)$ edges; the graph degree is $D_*$; each edge moves
+each space-time coordinate by at most one; and the number of
+weighted rooted trees of $\ell$ edges is at most
+$2D_*(2D_*^2)^\ell$.
+
+\begin{lemma}[Certificate domination]\label{lem:certificates}
+At $m$ equal-time endpoints of pairwise sup-distance at least
+$L\geq8$, for $1\leq h\leq m$ and every cloned row,
+\begin{equation}\label{eq:certificate}
+ \Pr(\text{at least }h\text{ errors}\mid Y)
+ \leq8D_*m\varepsilon_*c^{\lceil L/8\rceil-1}
+                                  +\binom mh\delta_*^h.
+\end{equation}
+The estimate is uniform in time and $K\in U_\beta$.
+\end{lemma}
+\begin{proof}
+With $A_*=2D_*^2$, the number of allowed weighted trees with at
+most $4(n-1)$ edges is bounded by
+$2D_*\sum_{\ell=0}^{4(n-1)}A_*^\ell
+\leq4D_*A_*^{4(n-1)}$. Requiring their $n$ marked vertices
+to lie in the fault envelope has probability $\varepsilon_*^n$;
+extra faults are allowed. The union $S_n(u)$ of such certificates
+at a root therefore satisfies
+$\Pr(S_n(u))\leq4D_*\varepsilon_*c^{n-1}$.
+Each tree lies in a sup-ball of radius $4(n-1)$.
+
+Let $n_0=\lceil L/8\rceil$. At endpoint $j$ let $A_j$ be the
+root-fault event or a certificate with $n<n_0$. Its supporting
+coins lie at radius strictly less than $L/2$. These supports are
+disjoint for distinct endpoints. The $A_j$ are independent,
+including conditional on the row, and
+\[
+ \Pr(A_j)\leq\varepsilon_*+
+       4D_*\varepsilon_* /(1-c)\leq\delta_*.
+\]
+The remaining large-certificate event has probability at most
+$4D_*\varepsilon_*c^{n_0-1}/(1-c)
+\leq8D_*\varepsilon_*c^{n_0-1}$ per root.
+Every actual error belongs to a small or large event. Union-bound
+the large events and the choices of $h$ independent small events.
+This gives \eqref{eq:certificate}. Intersecting supports with the
+available time half-space only reduces them.
+\end{proof}
+
+Actual errors can remain correlated at every transverse distance.
+For a fair cloned bit $Y$, take time-one error probabilities
+$p_0,p_1$ depending on its value. Distant errors are conditionally
+independent but have unconditional covariance $(p_1-p_0)^2/4$.
+The lemma does not claim decay of this covariance.
+
+\subsection{Scale-only geometry and cluster states}
+At scale $k\geq1$ choose
+\begin{equation}\label{eq:scalegeometry}
+ m_k=8k+9,\qquad L_k=64(k+1),\qquad h_k=2^{-k}.
+\end{equation}
+Decode each blocked position by strict majority of $m_k$ copies
+spaced by $L_k$, then unpack. Write $r_k$ for the resulting gap
+ratio. The two words use at most $2k+3$ blocks. With $e_k$ the
+right side of \eqref{eq:certificate} at majority threshold,
+\begin{align}
+ e_k&\leq(8k+9)2^{-16k-14}+2^{-8k-10}
+                       \leq(8k+10)2^{-8k-10},\label{eq:ek}\\
+ (2k+3)e_k&\leq90\,2^{-6k-12}\leq4^{-k}/96.\label{eq:budget}
+\end{align}
+Indeed $8D_*\varepsilon_*\leq1$, $c=1/4$ and $\delta_*\leq1/16$.
+Also $(2k+3)(8k+10)\leq90\,4^{k-1}$: equality holds at $k=1$
+and successive polynomial ratios are less than four. The last
+comparison holds at $k=1$ and improves by a factor sixteen.
+These are all-scale bounds, not numerical fits.
+
+Conditional on the row, apply the lemma at majority threshold,
+union-bound over the word's blocks, and average over the row.
+For either gap word $u$ and every time,
+\begin{equation}\label{eq:fixedworderror}
+ \left|\Pr_{\lambda P_K^t}(\text{scale-}k\text{ decoded }u)
+             -(F_*^t\mu_{\rm row})([u])\right|\leq\eta_k:=4^{-k}/96.
+\end{equation}
+The reference probabilities converge. Finite decoded probabilities
+are continuous affine functions of the physical state, so every
+ordinary cluster state inherits their $\eta_k$ bounds against
+$\nu_b$. Ces\`aro cluster states inherit them too, by averaging
+the convergent reference sequence.
+
+For nonnegative pairs with $s=a+b>0$ and individual perturbations
+at most $\eta\leq s/4$, subtraction gives
+\begin{equation}\label{eq:ratiobound}
+ \left|\frac{a'}{a'+b'}-\frac a{a+b}\right|
+ \leq\frac{\eta}{s-2\eta}\leq\frac{2\eta}{s}.
+\end{equation}
+The numerator is $b(a'-a)-a(b'-b)$. Since $s\geq2^{-k}/6$,
+every ordinary or Ces\`aro cluster state satisfies
+\begin{equation}\label{eq:cluster-ratio}
+ |r_k(\bar\mu)-b_k|\leq h_k/8.
+\end{equation}
+The decoded denominator is positive and $\lim_k r_k(\bar\mu)=\beta$.
+This alone does not give fixed-$k$ inner time limits.
+
+\subsection{Continuous quantization gives genuine inner limits}
+Choose the realization with
+$b_k=2^{-k}\lfloor2^ka_k\rfloor$, for uniformly $0'$-computable
+rationals $a_k\in[0,1]$ tending to $\beta$. This is exact rational
+flooring and $b_k\to\beta$. On $[0,1]$ define
+\begin{equation}\label{eq:quantizer}
+ Q_k(x)=h_k\sum_{j=0}^{2^k-1}
+   \min\{1,\max\{0,2x/h_k-2j-\tfrac12\}\}.
+\end{equation}
+This target-independent continuous rational piecewise-linear map
+equals $jh_k$ on $|x-jh_k|\leq h_k/4$, intersected with $[0,1]$,
+including the endpoints. Use $s_k=Q_k\circ r_k$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:clockfree}]
+Equation~\eqref{eq:cluster-ratio} gives $s_k(\bar\mu)=b_k$
+exactly at every cluster state. At fixed $k$ the same estimate gives
+$\limsup_t|r_k(\lambda P_K^t)-b_k|\leq h_k/8$.
+There is a strict margin to the plateau boundary $h_k/4$.
+Hence $s_k(\lambda P_K^t)=b_k$ for all sufficiently large $t$.
+Every inner time limit exists and the outer limit is $\beta$,
+uniformly on the kernel region. Denominators are positive at
+finite times by positive rates, and at cluster states by the
+displayed bounds. The statistic uses scale but no age. This
+chooses a dyadic-parameter realization; it does not prove convergence
+of every earlier unquantized ratio.
+
+At computable $K$ and canonical seed, $C_T$ is uniformly computable
+and its cluster class $V'$ has the valid-code description
+\begin{equation}\label{eq:cluster-pi2}
+ \mu\in V'\ \Longleftrightarrow\
+ (\forall n,T)(\exists t\geq T)\ d(C_t,\mu)<2^{-n}.
+\end{equation}
+Strict inequality has a finite-precision positive witness, giving
+a $\Pi^0_2$ condition. Compactness gives nonemptiness; TI and
+\eqref{eq:cesaro-residual} give stationarity. On $V'$ the
+clock-free law is $\beta$. A low name $X$ would compute that
+one-limit value in $X'\equiv_T0'$, impossible if $\beta\notin\D_2$.
+Every nonempty effective $\Sigma^0_2$ class has a nonempty closed
+piece and a low code, so cannot have this depth-one consensus.
+Ordinary cluster states share the law but need not be stationary.
+\end{proof}

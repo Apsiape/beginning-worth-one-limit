@@ -1,0 +1,112 @@
+\begin{thebibliography}{10}
+
+\bibitem{boyer}
+L.~Boyer, M.~Delacourt, V.~Poupet, M.~Sablik, and G.~Theyssier.
+\newblock $\mu$-limit sets of cellular automata from a computational complexity
+  perspective.
+\newblock {\em Journal of Computer and System Sciences}, 81, 2015.
+\newblock \url{https://arxiv.org/abs/1309.6730v2}.
+
+\bibitem{bgm}
+V.~Brattka, G.~Gherardi, and A.~Marcone.
+\newblock The {Bolzano--Weierstrass} theorem is the jump of weak {K{\"o}nig}'s
+  lemma, 2017.
+\newblock Version 3. \url{https://arxiv.org/abs/1101.0792v3}.
+
+\bibitem{choquet}
+G.~Choquet.
+\newblock Le th{\'e}or{\`e}me de repr{\'e}sentation int{\'e}grale dans les
+  ensembles convexes compacts.
+\newblock {\em Annales de l'Institut Fourier}, 10:333--344, 1960.
+\newblock \url{https://doi.org/10.5802/aif.105}.
+
+\bibitem{domany}
+E.~Domany and W.~Kinzel.
+\newblock Equivalence of cellular automata to {Ising} models and directed
+  percolation.
+\newblock {\em Physical Review Letters}, 53:311--314, 1984.
+\newblock \url{https://doi.org/10.1103/PhysRevLett.53.311}.
+
+\bibitem{criticalcurrent}
+S.~Douglas and N.~Mghirbi.
+\newblock Uncomputable critical exponents, 2026.
+\newblock Version 2.1.0. \url{https://doi.org/10.5281/zenodo.23780285}.
+
+\bibitem{gacsself}
+P.~G{\'a}cs.
+\newblock Reliable cellular automata with self-organization.
+\newblock {\em Journal of Statistical Physics}, 103(1--2):45--267, 2001.
+\newblock Corrected and strengthened manuscript, version 2 (2024):
+  \url{https://arxiv.org/abs/math/0003117v2}.
+
+\bibitem{gacstoom}
+P.~G{\'a}cs.
+\newblock A new version of {Toom}'s proof, 2021.
+\newblock Version 1; theorem and lemma numbers refer to the PDF.
+  \url{https://arxiv.org/abs/2105.05968v1}.
+
+\bibitem{gacsreif}
+P.~G{\'a}cs and J.~Reif.
+\newblock A simple three-dimensional real-time reliable cellular array.
+\newblock {\em Journal of Computer and System Sciences}, 36(2):125--147, 1988.
+\newblock \url{https://doi.org/10.1016/0022-0000(88)90024-4}.
+
+\bibitem{ghr}
+S.~Galatolo, M.~Hoyrup, and C.~Rojas.
+\newblock Dynamics and abstract computability: computing invariant measures.
+\newblock {\em Discrete and Continuous Dynamical Systems}, 29(1):193--212,
+  2011.
+\newblock \url{https://doi.org/10.3934/dcds.2011.29.193}.
+
+\bibitem{goldstein}
+S.~Goldstein, R.~Kuik, J.~L. Lebowitz, and C.~Maes.
+\newblock From {PCA}'s to equilibrium systems and back.
+\newblock {\em Communications in Mathematical Physics}, 125:71--79, 1989.
+\newblock \url{https://doi.org/10.1007/BF01217769}.
+
+\bibitem{hdms}
+B.~{Hellouin de Menibus} and M.~Sablik.
+\newblock Characterisation of sets of limit measures of a cellular automaton
+  iterated on a random configuration, 2016.
+\newblock Version 3. \url{https://arxiv.org/abs/1301.1998v3}.
+
+\bibitem{lowbasis}
+C.~G. {Jockusch, Jr.} and R.~I. Soare.
+\newblock $\pi^0_1$ classes and degrees of theories.
+\newblock {\em Transactions of the American Mathematical Society}, 173:33--56,
+  1972.
+\newblock \url{https://doi.org/10.1090/S0002-9947-1972-0316227-0}.
+
+\bibitem{marcovici}
+I.~Marcovici, M.~Sablik, and S.~Taati.
+\newblock Ergodicity of some classes of cellular automata subject to noise.
+\newblock {\em Electronic Journal of Probability}, 24(41):1--44, 2019.
+\newblock \url{https://doi.org/10.1214/19-EJP297}.
+
+\bibitem{marsan}
+H.~Marsan and M.~Sablik.
+\newblock Characterization of the set of zero-noise limits measures of
+  perturbed cellular automata, 2024.
+\newblock Version 2. \url{https://arxiv.org/abs/2412.04672v2}.
+
+\bibitem{taatinoise}
+S.~Taati.
+\newblock Reversible cellular automata in presence of noise rapidly forget
+  everything.
+\newblock In {\em AUTOMATA 2021}, volume~90 of {\em OASIcs}, pages 3:1--3:15,
+  2021.
+\newblock \url{https://doi.org/10.4230/OASIcs.AUTOMATA.2021.3}.
+
+\bibitem{miekisztaati}
+S.~Taati and J.~Mi\k{e}kisz.
+\newblock Quasicrystalline {Gibbs} states in 4-dimensional lattice-gas models
+  with finite-range interactions, 2025.
+\newblock Version 1. \url{https://arxiv.org/abs/2512.24436v1}.
+
+\bibitem{toom}
+A.~L. Toom.
+\newblock Stable and attractive trajectories in multicomponent systems.
+\newblock In R.~L. Dobrushin and Y.~G. Sinai, editors, {\em Multicomponent
+  Random Systems}, pages 549--575. Marcel Dekker, 1980.
+
+\end{thebibliography}

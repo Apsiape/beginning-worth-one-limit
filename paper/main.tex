@@ -1,0 +1,50 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,booktabs,array}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\hypersetup{
+ pdftitle={A beginning is worth one limit: robust unlearnable laws in noisy cellular automata},
+ pdfauthor={Seth Douglas and Nidhal Mghirbi}
+}
+\newcommand{\DoNotLoadEpstopdf}{}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\D}{\mathsf D}
+\newcommand{\M}{\mathcal M}
+\newcommand{\ST}{\mathcal S_{\rm TI}}
+\newcommand{\cl}{\operatorname{cl}}
+\newcommand{\Maj}{\operatorname{Maj}}
+\DeclareMathOperator{\ext}{ext}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{conjecture}[theorem]{Open problem}
+\title{A beginning is worth one limit:\\robust unlearnable laws in noisy cellular automata\thanks{The authors developed this work with AI models from more than one developer and take responsibility for every claim. How the work was done, and what the machine checks cover, is described at the end of the paper.}}
+\author{Seth Douglas \and Nidhal Mghirbi}
+\date{Version 1.0.0, October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We compare nested expectation laws of begun and stationary probabilistic cellular automata. At equal scale depth $d$, a computable begun law has ceiling $\Delta^0_{d+2}$, whereas consensus on a nonempty effectively $\Sigma^0_2$ class of stationary translation-invariant states has ceiling $\Delta^0_{d+1}$. We attain the begun ceiling at every finite depth using positive-rate three-dimensional rules, an open kernel region and a uniform renewal-gap readout schema. The canonical seed clones a uniform Bernoulli row on the physical block alphabet. Seed universality refers to blocked full-support, one-cell-shift-invariant ergodic laws on the pre-blocking alphabet. The seed has no distinguished origin or program but retains infinite transverse redundancy. At depth one, local error certificates and a continuous plateau quantizer give every $\Delta^0_3$ value in [0,1] with a clock-free readout and genuine inner time limits. Every ordinary and Cesaro cluster state carries the same law; at computable kernels its stationary Cesaro cluster class is $\Pi^0_2$ and has no low member when the value is outside $\Delta^0_2$. An exact conditional-cone identity transfers any computable-seed begun depth-d law to a depth-(d+1) law in every stationary state of the same positive-rate rule. The extra limit is sufficient and sharp across the arithmetic ranges, but need not be minimal for an individual law. In the normalized four-dimensional Gibbs formulation its lag is a slab separation. At computable begun data, fixed targets outside $\Delta^0_2$ cannot be learned with positive probability by effective finite-history inquiries. Removing cloned preparation from the realization remains open.
+\end{abstract}
+\input{definitions}
+\input{results}
+\input{consensus}
+\input{renewal}
+\input{clockfree}
+\input{transfer}
+\input{gibbs}
+\input{selection}
+\input{scope}
+\bibliographystyle{abbrv}
+\bibliography{references}
+\end{document}
