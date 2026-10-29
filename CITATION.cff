@@ -3,6 +3,7 @@ message: Please cite the paper; this distribution supplies its source and finite
 type: software
 title: 'A beginning is worth one limit: robust unlearnable laws in noisy cellular automata'
 version: 1.0.0
+doi: "10.5281/zenodo.23782039"
 date-released: '2026-10-29'
 license:
 - CC-BY-4.0
@@ -24,4 +25,5 @@ preferred-citation:
     given-names: Nidhal
   year: 2026
   version: 1.0.0
+  doi: "10.5281/zenodo.23782039"
   notes: 'Preprint. Text: CC BY 4.0. Scripts: MIT or Apache 2.0; see RIGHTS.md.'
